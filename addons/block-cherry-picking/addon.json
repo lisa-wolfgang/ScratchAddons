@@ -1,0 +1,49 @@
+{
+  "name": "Block cherry-picking",
+  "description": "Only moves one block when dragging on a script.",
+  "credits": [
+    {
+      "name": "lisa_wolfgang",
+      "link": "https://github.com/lisa-wolfgang"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["https://scratch.mit.edu/projects/*"]
+    }
+  ],
+  "info": [
+    {
+      "type": "notice",
+      "text": "If you select \"Always enable\", you will lose the ability to drag entire scripts via their hat blocks, making them very hard to move.",
+      "id": "alwaysEnableIsHassle"
+    }
+  ],
+  "settings": [
+    {
+      "name": "Enable mode",
+      "id": "ctrlMode",
+      "type": "select",
+      "potentialValues": [
+        {
+          "id": "ctrlEnable",
+          "name": "CTRL + drag"
+        },
+        {
+          "id": "defaultEnable",
+          "name": "Enable by default (CTRL + drag for normal behavior)"
+        },
+        {
+          "id": "fullEnable",
+          "name": "Always enable"
+        }
+      ],
+      "default": "ctrlEnable"
+    }
+  ],
+  "tags": ["editor", "codeEditor", "beta"],
+  "versionAdded": "1.15.0",
+  "enabledByDefault": false,
+  "l10n": true
+}
