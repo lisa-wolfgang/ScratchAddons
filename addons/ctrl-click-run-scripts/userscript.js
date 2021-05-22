@@ -31,14 +31,14 @@ export default async function ({ addon, global, console }) {
   vm.editingTarget.blocks.constructor.prototype.blocklyListen = newBlocklyListen;
 
   // Disables Ctrl+Click activating the context menu on macOS
-  let untoggle = false
+  let untoggle = false;
   const contextMenuWithCtrlClickDisabled = function (options) {
-    console.log(this)
+    console.log(this);
     if ((addon.self.disabled || ctrlKeyPressed) && !untoggle) {
-      console.log('Disabled')
+      console.log("Disabled");
       this.contextMenu = false;
     } else {
-      console.log('Not disabled')
+      console.log("Not disabled");
       this.contextMenu = true;
     }
   };
@@ -85,5 +85,4 @@ export default async function ({ addon, global, console }) {
     }, 100);
   }
   addon.tab.addEventListener("urlChange", () => addon.tab.editorMode === "editor" && inject());
- 
 }
