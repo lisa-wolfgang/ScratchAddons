@@ -57,8 +57,13 @@
   ],
   "userscripts": [
     {
-      "url": "userscript.js",
+      "url": "projectPage.js",
       "matches": ["projects"],
+      "runAtComplete": "true"
+    },
+    {
+      "url": "homePage.js",
+      "matches": ["https://scratch.mit.edu/"],
       "runAtComplete": "true"
     }
   ],
