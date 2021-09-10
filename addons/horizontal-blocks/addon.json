@@ -1,0 +1,20 @@
+{
+  "name": "Horizontal blocks",
+  "description": "Makes blocks the horizontal shape from ScratchJr.",
+  "credits": [
+    {
+      "name": "lisa_wolfgang",
+      "link": "https://scratch.mit.edu/users/lisa_wolfgang/"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["projects"]
+    }
+  ],
+  "dynamicDisable": true,
+  "dynamicEnable": true,
+  "tags": ["theme", "editor"],
+  "enabledByDefault": false
+}
