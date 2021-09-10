@@ -4,5 +4,5 @@ export default async function ({ addon, global, console }) {
   BlocklyInstance.Options = function (options) {
     this.horizontalLayout = true;
     return originalObject.call(this, options);
-  }
+  };
 }
