@@ -1,6 +1,6 @@
 {
   "name": "Scratch 2.0 \u2192 3.0",
-  "description": "Makes Scratch 2.0-styled pages look like Scratch 3.0.",
+  "description": "Makes Scratch 2.0-styled pages look like Scratch 3.0, and updates some 3.0 pages to look more consistent.",
   "tags": ["community", "theme", "recommended"],
   "credits": [
     {
@@ -87,6 +87,10 @@
   "injectAsStyleElt": true,
   "versionAdded": "1.1.0",
   "userstyles": [
+    {
+      "url": "homepage.css",
+      "matches": ["https://scratch.mit.edu/"]
+    },
     {
       "url": "scratchr2.css",
       "matches": ["isNotScratchWWW"]
