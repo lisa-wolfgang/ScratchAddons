@@ -1,0 +1,20 @@
+{
+  "name": "Insert input blocks",
+  "description": "When dragging a block with empty input fields on top of a reporter, automatically fits the reporter into that block.",
+  "credits": [
+    {
+      "name": "lisa_wolfgang",
+      "link": "https://github.com/lisa-wolfgang"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["https://scratch.mit.edu/projects/*"]
+    }
+  ],
+  "tags": ["editor", "codeEditor"],
+  "dynamicDisable": true,
+  "dynamicEnable": true,
+  "enabledByDefault": false
+}
