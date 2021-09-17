@@ -1,0 +1,49 @@
+{
+  "name": "Exact transformations in costume editor",
+  "description": "Adds number inputs to the costume editor that can adjust the X/Y position, X/Y size, and rotation of the selected object.",
+  "tags": ["editor", "costumeEditor"],
+  "credits": [
+    {
+      "name": "lisa_wolfgang",
+      "link": "https://scratch.mit.edu/users/lisa_wolfgang"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["projects"],
+      "runAtComplete": false
+    }
+  ],
+  "userstyles": [
+    {
+      "url": "style.css",
+      "matches": ["projects"]
+    }
+  ],
+  "settings": [
+    {
+      "name": "X/Y position",
+      "id": "positions",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "name": "X/Y size",
+      "id": "size",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "name": "Rotation",
+      "id": "rotation",
+      "type": "boolean",
+      "default": true
+    }
+  ],
+  "dynamicEnable": true,
+  "dynamicDisable": false,
+  "updateUserstylesOnSettingsChange": true,
+  "versionAdded": "1.21.0",
+  "enabledByDefault": false
+}
