@@ -6,4 +6,4 @@ export default async function ({ addon, global, console }) {
   addon.tab.redux.addEventListener("statechanged", (data) => {
     console.log(data.detail.action);
   });
-};
+}
