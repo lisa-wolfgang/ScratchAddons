@@ -33,12 +33,16 @@ export default async function ({ addon, global, console }) {
     }
   }
 
-  // Properly scale variable monitors on stage resize.
+  // Properly scale variable monitors and canvas on stage resize.
   let monitorScaler, resizeObserver, stage;
   async function initScaler() {
     monitorScaler = await addon.tab.waitForElement("[class*=monitor-list_monitor-list-scaler]");
     stage = await addon.tab.waitForElement('[class*="stage-wrapper_full-screen"] [class*="stage_stage"]');
     resizeObserver = new ResizeObserver(() => {
+      // Properly upscale (or downscale) canvas resolution.
+      const canvas = stage.querySelector("canvas");
+      canvas.width = canvas.getBoundingClientRect().width;
+      canvas.height = canvas.getBoundingClientRect().height;
       // Scratch uses the `transform` CSS property on a stage overlay element
       // to control the scaling of variable monitors.
       monitorScaler.style.transform = `scale(${stage.getBoundingClientRect().width / 480}, ${
