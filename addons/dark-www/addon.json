@@ -1924,6 +1924,66 @@
       }
     },
     {
+      "name": "2",
+      "id": "ed2",
+      "description": "A dark theme by Maximouse based on a userstyle. Not experimental",
+      "values": {
+        "page": "#202020",
+        "navbar": "#4d97ff",
+        "box": "#47485A",
+        "gray": "#333333",
+        "blue": "#252c37",
+        "input": "#202020",
+        "button": "#4d97ff",
+        "link": "#4d97ff",
+        "footer": "#333333",
+        "border": "#606060",
+        "darkBanners": "darker",
+        "darkScrollbars": true,
+        "darkForumCode": true
+      }
+    },
+    {
+      "name": "3",
+      "id": "experimentalDark3",
+      "description": "A dark theme by Maximouse based on a userstyle. Not experimental",
+      "values": {
+        "page": "#202020",
+        "navbar": "#4d97ff",
+        "box": "#47485A",
+        "gray": "#333333",
+        "blue": "#252c37",
+        "input": "#202020",
+        "button": "#4d97ff",
+        "link": "#FF744D",
+        "footer": "#333333",
+        "border": "#606060",
+        "darkBanners": "darker",
+        "darkScrollbars": true,
+        "darkForumCode": true
+      }
+    },
+    {
+      "name": "4",
+      "id": "experimentalDark4",
+      "description": "A dark theme by Maximouse based on a userstyle. Not experimental",
+      "values": {
+        "page": "#482C24",
+        "navbar": "#4d97ff",
+        "box": "#47485A",
+        "gray": "#333333",
+        "blue": "#252c37",
+        "input": "#202020",
+        "button": "#4d97ff",
+        "link": "#FF744D",
+        "footer": "#333333",
+        "border": "#606060",
+        "darkBanners": "darker",
+        "darkScrollbars": true,
+        "darkForumCode": true
+      }
+    },
+    {
       "name": "Dark WWW",
       "id": "darkWww",
       "description": "A dark theme by Ucrash",
