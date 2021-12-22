@@ -33,6 +33,13 @@ chrome.storage.sync.get(["addonSettings", "addonsEnabled"], ({ addonSettings = {
       addonsEnabled["move-to-top-bottom"] = true;
       madeAnyChanges = true;
     }
+    if (addonsEnabled["tutorials-button"] && !addonSettings["tutorials-button"]) {
+      // Transition v1.23 to v1.24
+      // Default option for `mode` (new setting) is `scratch2`,
+      // but users with this addon previously enabled should have `hidden` set instead
+      madeAnyChanges = true;
+      addonSettings["tutorials-button"].mode = "hidden";
+    }
 
     for (const { manifest, addonId } of scratchAddons.manifests) {
       // TODO: we should be using Object.create(null) instead of {}

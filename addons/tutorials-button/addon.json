@@ -1,6 +1,6 @@
 {
-  "name": "Hide Tutorials button",
-  "description": "Hides the Tutorials button in the editor menu bar.",
+  "name": "Scratch 2.0 / hidden tutorials button",
+  "description": "Brings back the help menu from Scratch 2.0 when you click the Tutorials button in the editor menu bar, or optionally hide it altogether. Also allows you to automatically hide the \"Getting Started\" tutorial when creating a new project from the website navigation bar.",
   "tags": ["editor"],
   "credits": [
     {
@@ -11,11 +11,45 @@
   "userstyles": [
     {
       "url": "userstyle.css",
+      "matches": ["projects"],
+      "if": {
+        "settings": { "mode": "hidden" }
+      }
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
       "matches": ["projects"]
     }
   ],
-  "versionAdded": "1.22.0",
+  "settings": [
+    {
+      "name": "Button mode",
+      "id": "mode",
+      "type": "select",
+      "potentialValues": [
+        {
+          "name": "Replace with Scratch 2.0 help menu",
+          "id": "scratch2"
+        },
+        {
+          "name": "Hide from toolbar",
+          "id": "hidden"
+        }
+      ],
+      "default": "scratch2"
+    },
+    {
+      "name": "Don't show \"Getting Started\" tutorial when creating projects",
+      "id": "stop-getting-started",
+      "type": "boolean",
+      "default": true
+    }
+  ],
+  "versionAdded": "1.24.0",
   "dynamicEnable": true,
   "dynamicDisable": true,
+  "updateUserstylesOnSettingsChange": true,
   "enabledByDefault": false
 }
