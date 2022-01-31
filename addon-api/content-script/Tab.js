@@ -280,6 +280,7 @@ export default class Tab extends Listenable {
    * forumsAfterPostReport - after the report button in forum posts
    * beforeRemixButton - before the remix button in project page
    * studioCuratorsTab - inside the studio curators tab
+   * spriteCreationMenu - inside create costume/sprite/backdrop/sound dropups
    * @param {object} opts - options.
    * @param {string} opts.space - the shared space name.
    * @param {HTMLElement} element - the element to add.
@@ -474,6 +475,11 @@ export default class Tab extends Listenable {
           return [potential[potential.length - 1]];
         },
         until: () => [],
+      },
+      spriteCreationMenu: {
+        element: () => scope,
+        from: () => [],
+        until: () => [scope.querySelector("div:nth-last-child(4)")],
       },
     };
 

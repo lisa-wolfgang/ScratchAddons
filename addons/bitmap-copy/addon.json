@@ -1,6 +1,6 @@
 {
-  "name": "Bitmap images copying",
-  "description": "Allows you to copy a bitmap image from the costume editor into the system clipboard, so that you can paste it in other websites or software.",
+  "name": "Bitmap images copying/pasting",
+  "description": "Allows you to copy a bitmap image from the costume editor into the system clipboard, so that you can paste it in other websites or software, as well as pasting images from your clipboard as a costume.",
   "info": [
     {
       "type": "notice",
@@ -12,11 +12,34 @@
     {
       "url": "userscript.js",
       "matches": ["projects"]
+    },
+    {
+      "url": "paste.js",
+      "matches": ["projects"]
+    }
+  ],
+  "userstyles": [
+    {
+      "url": "paste.css",
+      "matches": ["projects"]
+    }
+  ],
+  "credits": [
+    {
+      "name": "CST1229",
+      "note": "Pasting images",
+      "id": "pasting",
+      "link": "https://github.com/CST1229"
     }
   ],
   "dynamicEnable": true,
   "dynamicDisable": true,
   "versionAdded": "1.0.0",
+  "latestUpdate": {
+    "version": "1.24.0",
+    "isMajor": false,
+    "temporaryNotice": "You can now paste images using the Paste Image button or by pressing Ctrl+V on the sprite pane, list of costumes or the stage pane."
+  },
   "tags": ["editor", "costumeEditor"],
   "permissions": ["clipboardWrite"],
   "enabledByDefault": false
