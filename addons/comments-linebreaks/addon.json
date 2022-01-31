@@ -5,6 +5,10 @@
     {
       "name": "TheColaber",
       "link": "https://scratch.mit.edu/users/TheColaber"
+    },
+    {
+      "name": "Samq64",
+      "link": "https://scratch.mit.edu/users/samq64/"
     }
   ],
   "userscripts": [
@@ -18,9 +22,43 @@
     {
       "url": "break-spaces.css",
       "matches": ["studios", "projects"]
+    },
+    {
+      "url": "scrollbars.css",
+      "matches": ["studios", "projects"],
+      "if": {
+        "settings": {
+          "scrollbars": true
+        }
+      }
+    }
+  ],
+  "settings": [
+    {
+      "name": "Add scroll bars to tall comments",
+      "id": "scrollbars",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "Maximum number of lines",
+      "id": "height",
+      "type": "integer",
+      "min": 1,
+      "max": 100,
+      "default": 5,
+      "if": {
+        "settings": {
+          "scrollbars": true
+        }
+      }
     }
   ],
   "dynamicEnable": true,
   "versionAdded": "1.8.0",
+  "latestUpdate": {
+    "version": "1.24.0",
+    "newSettings": ["scrollbars", "height"]
+  },
   "tags": ["community", "comments"]
 }
