@@ -5,6 +5,10 @@
     {
       "name": "Verixion",
       "link": "https://scratch.mit.edu/users/Verixion/"
+    },
+    {
+      "name": "lisa_wolfgang",
+      "link": "https://scratch.mit.edu/users/lisa_wolfgang/"
     }
   ],
   "userstyles": [
@@ -51,6 +55,13 @@
       }
     }
   ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["projects"],
+      "runAtComplete": true
+    }
+  ],
   "settings": [
     {
       "name": "Hide love count",
@@ -86,6 +97,12 @@
       "name": "Hide remix count in \"What the Community is Remixing\"",
       "default": true,
       "id": "remixesFront",
+      "type": "boolean"
+    },
+    {
+      "name": "Show stats on my own projects",
+      "default": false,
+      "id": "showOwnStats",
       "type": "boolean"
     }
   ],
