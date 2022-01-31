@@ -412,7 +412,11 @@
       <!-- Show errors, loading, etc. -->
       <div class="status-container">
         <p v-show="error === 'notReady'">{{ uiMessages.loadingMsg }}</p>
-        <p v-show="error === 'loggedOut'">{{ uiMessages.loggedOutMsg }}</p>
+        <p v-show="error === 'loggedOut'">
+          <a v-cloak href="https://scratch.mit.edu/login" class="nolink open-messages"
+            >{{ uiMessages.loggedOutMsg }}<img src="../../images/icons/popout.svg" class="popout"
+          /></a>
+        </p>
         <p v-show="error === 'serverError'">{{ uiMessages.serverErrorMsg }}</p>
         <p v-show="error === 'networkError'">{{ uiMessages.networkErrorMsg }}</p>
         <p v-show="messagesReady && !commentsReady">{{ uiMessages.loadingCommentsMsg }}</p>
@@ -431,9 +435,14 @@
         <span v-show="messagesReady && showingMessagesAmt === 0 && stMessages.length === 0" class="status-empty"
           >{{ uiMessages.noUnreadMsg }}</span
         >
-        <button @click="showAllMessages = true" v-show="canShowMoreMessages">
-          <img class="small-icon" src="../../images/icons/plus.svg" /><span>{{ uiMessages.showMoreMsg }}</span>
-        </button>
+        <div v-show="commentsReady || canShowMoreMessages" id="buttons-container">
+          <button @click="reloadPage()" v-show="commentsReady">
+            <img class="small-icon" src="../../images/icons/reload.svg" /><span>{{ uiMessages.reloadMsg }}</span>
+          </button>
+          <button @click="showAllMessages = true" v-show="canShowMoreMessages">
+            <img class="small-icon" src="../../images/icons/plus.svg" /><span>{{ uiMessages.showMoreMsg }}</span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -444,8 +453,8 @@
         ><img class="small-icon" src="../../images/icons/read.svg" /> {{ uiMessages.markedAsReadMsg }}</span
       >
       <span v-cloak class="separator">|</span>
-      <a v-cloak href="https://scratch.mit.edu/messages" id="open-messages"
-        >{{ uiMessages.openMessagesMsg }}<img src="../../images/icons/popout.svg" id="popout"
+      <a v-cloak href="https://scratch.mit.edu/messages" class="nolink open-messages"
+        >{{ uiMessages.openMessagesMsg }}<img src="../../images/icons/popout.svg" class="popout"
       /></a>
     </div>
   </body>
