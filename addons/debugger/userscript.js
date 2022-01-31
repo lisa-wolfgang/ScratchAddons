@@ -224,6 +224,36 @@ export default async function ({ addon, global, console, msg }) {
     icon: addon.self.dir + "/icons/close.svg",
   });
   closeButton.element.addEventListener("click", () => setInterfaceVisible(false));
+  closeButton.addEventListener("click", () => toggleConsole(false));
+  closeButton.addEventListener("mouseup", () => closeDragElement());
+  let download = (filename, text) => downloadBlob(filename, new Blob([text], { type: "text/plain" }));
+
+  unpauseButton.addEventListener("click", () => setPaused(false));
+  if (!paused) unpauseButton.style.display = "none";
+  onPauseChanged((newPauseValue) => (unpauseButton.style.display = newPauseValue ? "" : "none"));
+
+  exportButton.addEventListener("click", async (e) => {
+    const defaultFormat = "{sprite}: {content} ({type})";
+    const exportFormat = e.shiftKey
+      ? await addon.tab.prompt(msg("export"), msg("enter-format"), defaultFormat, { useEditorClasses: true })
+      : defaultFormat;
+    if (!exportFormat) return;
+    closeDragElement();
+    const targetInfoCache = Object.create(null);
+    let file = logs
+      .map(({ targetId, type, content }) =>
+        exportFormat.replace(
+          /\{(sprite|type|content)\}/g,
+          (_, match) =>
+            ({
+              sprite: getTargetInfo(targetId, targetInfoCache).name,
+              type,
+              content,
+            }[match])
+        )
+      )
+      .join("\n");
+    download("logs.txt", file);
 
   const originalStep = vm.runtime._step;
   const afterStepCallbacks = [];
