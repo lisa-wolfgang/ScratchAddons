@@ -7,7 +7,7 @@ import BlockItem from "./BlockItem.js";
 import UndoGroup from "./blockly/UndoGroup.js";
 
 export default class DevTools {
-  constructor(addon, msg, m, helpHTML) {
+  constructor(addon, msg, m, helpHTML, console) {
     this.addon = addon;
     this.msg = msg;
     this.m = m;
@@ -20,6 +20,7 @@ export default class DevTools {
     this.multi = new Multi(this.utils);
 
     this._helpHTML = helpHTML;
+    this.console = console;
     this.find = null;
     this.findInp = null;
     this.ddOut = null;
@@ -244,7 +245,7 @@ export default class DevTools {
     let wksp = this.utils.getWorkspace();
     let topBlocks = wksp.getTopBlocks();
 
-    // console.log(topBlocks);
+    // this.console.log(topBlocks);
 
     /**
      * @param cls
@@ -1019,7 +1020,7 @@ export default class DevTools {
   }
 
   dropDownClick(e) {
-    // console.log(e);
+    // this.console.log(e);
     let workspace = this.utils.getWorkspace();
 
     if (prevVal === null) {
@@ -1046,8 +1047,8 @@ export default class DevTools {
         try {
           sel.classList.remove("sel");
         } catch (e) {
-          console.log(sel);
-          console.error(e);
+          this.console.log(sel);
+          this.console.error(e);
         }
       }
       if (li !== sel) {
@@ -1288,7 +1289,7 @@ export default class DevTools {
       let x = xml.xmlDoc.firstChild;
 
       let tree = math.parse(codeString);
-      console.log(tree);
+      this.console.log(tree);
 
       const binaryOperatorTypes = {
         add: "operator_add",
@@ -1356,10 +1357,10 @@ export default class DevTools {
       }
 
       translateMathToXml(x, tree);
-      console.log(x);
+      this.console.log(x);
 
       let ids = Blockly.Xml.domToWorkspace(x, w);
-      console.log(ids);
+      this.console.log(ids);
     }
      */
   /*
@@ -1401,7 +1402,7 @@ export default class DevTools {
     let topBlocks = wksp.getTopBlocks();
     for (const block of topBlocks) {
       if (!ids.has(block.id)) {
-        // console.log("I found a new block!!! - " + block.id);
+        // this.console.log("I found a new block!!! - " + block.id);
         // todo: move the block to the mouse pointer?
         let mouseXYClone = { x: this.mouseXY.x, y: this.mouseXY.y };
         this.domHelpers.triggerDragAndDrop(block.svgPath_, null, mouseXYClone);
@@ -1563,7 +1564,7 @@ export default class DevTools {
       try {
         this.middleClick(e);
       } catch (x) {
-        console.error(x);
+        this.console.error(x);
       }
     } else if (e.button === 2) {
       // Right click...
@@ -1895,7 +1896,7 @@ export default class DevTools {
     const ddOut = document.getElementById("s3devIDDOut");
     ddOut.classList.add("vis");
 
-    // console.log(options);
+    // this.console.log(options);
   }
 
   /**
