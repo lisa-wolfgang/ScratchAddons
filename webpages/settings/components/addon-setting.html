@@ -108,6 +108,34 @@
           :required="!!setting.min"
         />
       </template>
+      <template v-if="setting.type === 'datalist'">
+        <span v-click-outside="clickOutside">
+          <input
+            type="text"
+            class="setting-input string"
+            v-model="addonSettings[setting.id]"
+            @change="checkValidity() || updateSettings()"
+            @input="updateSearch()"
+            v-on:keyup.enter="selectItem()"
+            :disabled="!addon._enabled"
+            :placeholder="setting.default"
+            :maxlength="setting.max || 100"
+            :minlength="setting.min || 0"
+            :required="!!setting.min"
+            :data-addon-id="addon._addonId"
+            :data-setting-id="setting.id"
+            @focus="(showDatalist = wasClick = true) && clearSearch()"
+            @blur="showDatalist = wasClick"
+          />
+          <div class="setting-dropdown" :class="{ open: showDatalist }">
+            <ul>
+              <li v-for="item of filteredItems" @click="updateOption(item)">
+                <span>{{ item }}</span>
+              </li>
+            </ul>
+          </div>
+        </span>
+      </template>
       <template v-if="setting.type === 'key'"
         ><input
           type="text"
@@ -284,8 +312,8 @@
     border: 1px solid var(--control-border);
   }
   .iframe .setting-dropdown ul {
-    right: auto;
-    left: -100px;
+    right: 0px;
+    left: auto;
     border-top-right-radius: 4px;
   }
   [dir="rtl"] .setting-dropdown ul {

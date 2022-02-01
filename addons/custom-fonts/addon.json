@@ -1,0 +1,164 @@
+{
+  "name": "Customizable fonts",
+  "description": "Customize the fonts for different parts of Scratch.",
+  "tags": ["theme", "beta", "editor"],
+  "credits": [
+    {
+      "name": "ErrorGamer2000",
+      "link": "https://scratch.mit.edu/users/ErrorGamer2000/"
+    }
+  ],
+  "info": [
+    {
+      "type": "notice",
+      "id": "sizewarn",
+      "text": "Block letters in wider fonts could be very small."
+    }
+  ],
+  "enabledByDefault": false,
+  "dynamicEnable": true,
+  "dynamicDisable": true,
+  "versionAdded": "1.24.0",
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["https://scratch.mit.edu/*"],
+      "runAtComplete": true
+    }
+  ],
+  "settings": [
+    {
+      "name": "Navigation bar font",
+      "id": "navfnt",
+      "type": "datalist",
+      "default": "Helvetica",
+      "items": [
+        "Helvetica",
+        "Roboto",
+        "Lucida Grande",
+        "Verdana",
+        "Times New Roman",
+        "Sora",
+        "DejaVu Sans",
+        "Handlee",
+        "Antonio",
+        "Lato"
+      ],
+      "autofill": "font"
+    },
+    {
+      "name": "Editor menu bar font",
+      "id": "edmenfnt",
+      "type": "datalist",
+      "default": "Helvetica",
+      "items": [
+        "Helvetica",
+        "Roboto",
+        "Lucida Grande",
+        "Verdana",
+        "Times New Roman",
+        "Sora",
+        "DejaVu Sans",
+        "Handlee",
+        "Antonio",
+        "Lato"
+      ],
+      "autofill": "font"
+    },
+    {
+      "name": "Website content font",
+      "id": "mainfnt",
+      "type": "datalist",
+      "default": "Helvetica",
+      "items": [
+        "Helvetica",
+        "Roboto",
+        "Lucida Grande",
+        "Verdana",
+        "Times New Roman",
+        "Sora",
+        "DejaVu Sans",
+        "Handlee",
+        "Antonio",
+        "Lato"
+      ],
+      "autofill": "font"
+    },
+    {
+      "name": "Editor font",
+      "id": "editfnt",
+      "type": "datalist",
+      "default": "Helvetica",
+      "items": [
+        "Helvetica",
+        "Roboto",
+        "Lucida Grande",
+        "Verdana",
+        "Times New Roman",
+        "Sora",
+        "DejaVu Sans",
+        "Handlee",
+        "Antonio",
+        "Lato"
+      ],
+      "autofill": "font"
+    },
+    {
+      "name": "Block Font",
+      "id": "blockfnt",
+      "type": "datalist",
+      "default": "Helvetica",
+      "items": [
+        "Helvetica",
+        "Roboto",
+        "Lucida Grande",
+        "Verdana",
+        "Times New Roman",
+        "Sora",
+        "DejaVu Sans",
+        "Handlee",
+        "Antonio",
+        "Lato"
+      ],
+      "autofill": "font"
+    },
+    {
+      "name": "Header font",
+      "id": "headfnt",
+      "type": "datalist",
+      "default": "Helvetica",
+      "items": [
+        "Helvetica",
+        "Roboto",
+        "Lucida Grande",
+        "Verdana",
+        "Times New Roman",
+        "Sora",
+        "DejaVu Sans",
+        "Handlee",
+        "Antonio",
+        "Lato"
+      ],
+      "autofill": "font"
+    },
+    {
+      "name": "Footer font",
+      "id": "footerfnt",
+      "type": "datalist",
+      "default": "Helvetica",
+      "items": [
+        "Helvetica",
+        "Roboto",
+        "Lucida Grande",
+        "Verdana",
+        "Times New Roman",
+        "Sora",
+        "DejaVu Sans",
+        "Handlee",
+        "Antonio",
+        "Lato"
+      ],
+      "autofill": "font"
+    }
+  ]
+}

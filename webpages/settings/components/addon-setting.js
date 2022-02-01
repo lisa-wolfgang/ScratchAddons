@@ -4,6 +4,11 @@ export default async function ({ template }) {
     template,
     data() {
       return {
+        showDatalist: false,
+        wasClick: false,
+        items: [],
+        filteredItems: [],
+        search: false,
         rowDropdownOpen: false,
         noResetDropdown: ["table", "boolean", "select"].includes(this.setting.type),
       };
@@ -141,8 +146,48 @@ export default async function ({ template }) {
         this.$root.updateSettings(...params);
       },
       updateOption(newValue) {
+        this.wasClick = true;
+        this.showDatalist = false;
         this.addonSettings[this.setting.id] = newValue;
         this.updateSettings();
+      },
+      updateItems() {
+        let items = this.items;
+        switch (this.setting.autofill) {
+          case "font": {
+            chrome.fontSettings.getFontList((list) => {
+              items = items.concat(list.map((n) => n.displayName));
+              this.items = [...new Set(items)];
+            });
+            break;
+          }
+
+          default: {
+            break;
+          }
+        }
+      },
+
+      updateSearch() {
+        let input = document.querySelector(
+          `input[data-addon-id='${this.addon._addonId}'][data-setting-id='${this.setting.id}']`
+        );
+        let search = input.value.toLowerCase();
+        this.filteredItems = this.items.filter(function (item) {
+          return item.toLowerCase().includes(search);
+        });
+
+        this.search = !!search;
+        this.showDatalist = this.wasClick = true;
+      },
+
+      clearSearch() {
+        this.filteredItems = this.items;
+        this.search = false;
+      },
+
+      selectItem() {
+        this.updateOption(this.search ? this.filteredItems[0] : this.setting.default);
       },
     },
     events: {
@@ -152,6 +197,16 @@ export default async function ({ template }) {
       closeResetDropdowns(...params) {
         return this.$root.closeResetDropdowns(...params);
       },
+      clickOutside() {
+        this.showDatalist = this.wasClick = false;
+      },
+    },
+
+    created() {
+      if (this.setting.type === "datalist") {
+        this.filteredItems = this.items = this.setting.items;
+        this.updateItems();
+      }
     },
     directives: {
       sortable() {
