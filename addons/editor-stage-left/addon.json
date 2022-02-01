@@ -7,6 +7,11 @@
     },
     {
       "name": "djdolphin"
+    },
+    {
+      "name": "World_Languages",
+      "note": "full screen button on left",
+      "id": "fullscreen"
     }
   ],
   "userscripts": [
@@ -27,15 +32,14 @@
     {
       "url": "fullscreen-on-left.css",
       "matches": ["https://scratch.mit.edu/projects/*"],
-      "settingMatch": {
-        "id": "fullscreenOnLeft",
-        "value": true
+      "if": {
+        "fullscreenOnLeft": true
       }
     }
   ],
   "settings": [
     {
-      "name": "Fullscreen button on left",
+      "name": "Full screen button on left",
       "id": "fullscreenOnLeft",
       "type": "boolean",
       "default": false
@@ -43,5 +47,9 @@
   ],
   "tags": ["editor", "theme", "featured"],
   "versionAdded": "1.1.0",
+  "latestUpdate": {
+    "version": "1.25.0",
+    "newSettings": ["fullscreenOnLeft"]
+  },
   "enabledByDefault": false
 }
