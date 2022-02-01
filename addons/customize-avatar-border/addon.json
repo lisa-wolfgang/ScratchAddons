@@ -99,5 +99,8 @@
   ],
   "tags": ["community", "theme"],
   "versionAdded": "1.18.0",
+  "latestUpdate": {
+    "version": "1.25.0"
+  },
   "enabledByDefault": false
 }

@@ -108,7 +108,7 @@
   ],
   "tags": ["community", "featured"],
   "enabledByDefault": false,
-  "versionAdded": "1.24.0",
+  "versionAdded": "1.25.0",
   "libraries": ["popper", "tippy"],
   "dynamicEnable": true,
   "dynamicDisable": true,

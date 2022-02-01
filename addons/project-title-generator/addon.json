@@ -38,8 +38,8 @@
       "default": false
     }
   ],
-  "tags": ["editor", "easterEgg"],
+  "tags": ["editor"],
   "dynamicEnable": true,
   "dynamicDisable": true,
-  "versionAdded": "1.24.0"
+  "versionAdded": "1.25.0"
 }

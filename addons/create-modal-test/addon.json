@@ -7,5 +7,6 @@
       "url": "userscript.js",
       "matches": "*"
     }
-  ]
+  ],
+  "versionAdded": "1.25.0"
 }

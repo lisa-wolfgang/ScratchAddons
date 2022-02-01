@@ -18,7 +18,7 @@
   "dynamicDisable": true,
   "injectAsStyleElt": true,
   "updateUserstylesOnSettingsChange": true,
-  "tags": ["editor", "theme", "codeEditor"],
+  "tags": ["editor", "theme", "codeEditor", "beta"],
   "credits": [
     {
       "name": "CST1229",

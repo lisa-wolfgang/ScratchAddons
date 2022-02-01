@@ -2,7 +2,7 @@
   "json.schemas": [
     {
       "fileMatch": ["/addons/*/addon.json"],
-      "url": "https://raw.githubusercontent.com/ScratchAddons/manifest-schema/dist/schema.json"
+      "url": "https://raw.githubusercontent.com/lisa-wolfgang/manifest-schema/sa-nightly/1/1.18.json"
     },
     {
       "fileMatch": ["/manifest.json"],

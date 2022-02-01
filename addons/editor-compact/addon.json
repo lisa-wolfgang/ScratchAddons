@@ -1,7 +1,7 @@
 {
   "name": "Compact editor",
   "description": "Decreases the size of the menu bars and buttons in the editor, similar to the appearance of Scratch 2.0.",
-  "tags": ["editor", "theme"],
+  "tags": ["editor", "theme", "featured", "beta"],
   "credits": [
     {
       "name": "lisa_wolfgang",
@@ -16,6 +16,6 @@
   ],
   "dynamicEnable": true,
   "dynamicDisable": true,
-  "versionAdded": "1.24.0",
+  "versionAdded": "1.25.0",
   "enabledByDefault": false
 }

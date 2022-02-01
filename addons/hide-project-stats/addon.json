@@ -112,5 +112,9 @@
   "injectAsStyleElt": true,
   "tags": ["community", "projectPage"],
   "versionAdded": "1.19.0",
+  "latestUpdate": {
+    "version": "1.25.0",
+    "newSettings": ["showOwnStats"]
+  },
   "enabledByDefault": false
 }

@@ -1,7 +1,7 @@
 {
   "name": "Customizable fonts",
   "description": "Customize the fonts for different parts of Scratch.",
-  "tags": ["theme", "beta", "editor"],
+  "tags": ["theme", "beta", "editor", "featured"],
   "credits": [
     {
       "name": "ErrorGamer2000",
@@ -18,7 +18,7 @@
   "enabledByDefault": false,
   "dynamicEnable": true,
   "dynamicDisable": true,
-  "versionAdded": "1.24.0",
+  "versionAdded": "1.25.0",
   "userscripts": [
     {
       "url": "userscript.js",

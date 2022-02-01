@@ -3,6 +3,7 @@
   "description": "Makes website messages badge in navigation bar update every 2.5 seconds rather than the default 30 seconds.",
   "tags": ["community"],
   "enabledByDefault": false,
+  "versionAdded": "1.25.0",
   "userscripts": [
     {
       "url": "userscript.js",
