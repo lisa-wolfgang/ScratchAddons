@@ -7,6 +7,13 @@
       "link": "https://github.com/MrEgggga"
     }
   ],
+  "info": [
+    {
+      "type": "notice",
+      "text": "Comment blocks affect the performance of scripts. Only use them when you don't need to worry about performance.",
+      "id": "perf"
+    }
+  ],
   "userscripts": [
     {
       "url": "userscript.js",
@@ -15,5 +22,5 @@
   ],
   "tags": ["editor"],
   "enabledByDefault": false,
-  "versionAdded": "1.21.0"
+  "versionAdded": "1.25.0"
 }
