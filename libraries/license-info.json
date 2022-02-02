@@ -14,5 +14,6 @@
   "fuse": "Apache-2.0",
   "idb": "ISC",
   "popper": "MIT",
-  "tippy": "MIT"
+  "tippy": "MIT",
+  "libgif": "MIT"
 }

@@ -1,4 +1,5 @@
 export default async function ({ addon, console, msg }) {
+  await addon.tab.loadScript(addon.self.lib + "/thirdparty/cs/libgif.js");
   let mode = addon.settings.get("fitting");
 
   addon.settings.addEventListener("change", () => {
@@ -25,7 +26,7 @@ export default async function ({ addon, console, msg }) {
     });
     button.append(img);
     const input = Object.assign(document.createElement("input"), {
-      accept: ".svg, .png, .bmp, .jpg, .jpeg",
+      accept: ".svg, .png, .bmp, .jpg, .jpeg, .gif",
       className: `${addon.tab.scratchClass(
         "action-menu_file-input" /* TODO: when adding dynamicDisable, ensure compat with drag-drop */
       )} sa-better-img-uploads-input`,
@@ -100,7 +101,7 @@ export default async function ({ addon, console, msg }) {
         processed.push(file);
         continue;
       }
-
+      await addon.tab.loadScript(addon.self.lib + "/thirdparty/cs/libgif.js");
       let blob = await new Promise((resolve) => {
         //Get the Blob data url for the image so that we can add it to the svg
         let reader = new FileReader();
@@ -109,6 +110,8 @@ export default async function ({ addon, console, msg }) {
       });
 
       let i = new Image(); //New image to get the image's size
+      i.style.display = "none";
+      document.body.appendChild(i);
       i.src = blob;
       await new Promise((resolve) => {
         i.onload = resolve;
@@ -174,12 +177,29 @@ export default async function ({ addon, console, msg }) {
         };
       }
 
-      processed.push(
-        new File( //Create the svg file
-          [
-            `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0,0,${
-              dim.width
-            },${dim.height}" width="${dim.width}" height="${dim.height}">
+      if (file.type.includes("gif")) {
+        let sg = new SuperGif({ gif: i });
+        let frames = new Array();
+
+        await new Promise(function (resolve, reject) {
+          sg.load(resolve);
+        });
+
+        sg.move_to(0);
+
+        for (let i = 0; i < sg.get_length(); i++) {
+          sg.move_relative(1);
+          let canv = sg.get_canvas();
+          frames.push(canv.toDataURL("image/png"));
+        }
+
+        processed.push(
+          ...frames.map(function (blob) {
+            return new File(
+              [
+                `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0,0,${
+                  dim.width
+                },${dim.height}" width="${dim.width}" height="${dim.height}">
         <g>
           <g
               data-paper-data='{"isPaintingLayer":true}'
@@ -203,14 +223,52 @@ export default async function ({ addon, console, msg }) {
           </g>
         </g>
       </svg>`,
-          ],
-          `${file.name.replace(/(.*)\..*/, "$1")}.svg`,
-          {
-            type: "image/svg+xml",
-          }
-        )
-      );
+              ],
+              `${file.name.replace(/(.*)\..*/, "$1")}.svg`,
+              {
+                type: "image/svg+xml",
+              }
+            );
+          })
+        );
+      } else {
+        processed.push(
+          new File( //Create the svg file
+            [
+              `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0,0,${dim.width},${dim.height}" width="${dim.width}" height="${dim.height}">
+        <g>
+          <g
+              data-paper-data='{"isPaintingLayer":true}'
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="0.5"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              style="mix-blend-mode: normal;"
+          >
+            <image
+                width="${dim.width}"
+                height="${dim.height}"
+                xlink:href="${blob}"
+            />
+          </g>
+        </g>
+      </svg>`,
+            ],
+            `${file.name.replace(/(.*)\..*/, "$1")}.svg`,
+            {
+              type: "image/svg+xml",
+            }
+          )
+        );
+      }
     }
+
+    console.log(processed);
 
     (el = document.getElementById(iD).nextElementSibling.querySelector("input")).files = new FileList(processed); //Convert processed image array to a FileList, which is not normally constructible.
 

@@ -17,5 +17,6 @@ Third-party libraries included are:
 - [Popper 2.11.2](https://unpkg.com/@popperjs/core@2.11.2/dist/umd/popper.min.js) (MIT)
 - [Tippy.js 6.3.7](https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js) (MIT)
 - [Sortable.js 1.14.0](https://unpkg.com/sortablejs@1.14.0/Sortable.min.js) (MIT)
+- [libgif 0.0.3](https://unpkg.com/libgif@0.0.3/libgif.js)
 
 Note that these libraries are either from official release websites or from unpkg (which distributes the content uploaded to NPM as-is).
