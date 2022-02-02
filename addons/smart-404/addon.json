@@ -1,0 +1,32 @@
+{
+  "name": "Smart 404 Pages",
+  "description": "This addon suggests alternative URLs for 404 pages.",
+  "tags": ["community"],
+  "credits": [
+    {
+      "name": "god286",
+      "link": "https://scratch.mit.edu/users/god286"
+    }
+  ],
+  "settings": [
+    {
+      "name": "Automatic redirect to link",
+      "id": "redirect",
+      "type": "boolean",
+      "default": false
+    }
+  ],
+  "enabledByDefault": false,
+  "userscripts": [
+    {
+      "url": "smart.js",
+      "matches": ["https://scratch.mit.edu/*"]
+    }
+  ],
+  "userstyles": [
+    {
+      "url": "userstyle.css",
+      "matches": ["https://scratch.mit.edu/*"]
+    }
+  ]
+}
