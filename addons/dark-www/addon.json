@@ -1724,9 +1724,8 @@
   "injectAsStyleElt": true,
   "versionAdded": "1.4.0",
   "latestUpdate": {
-    "version": "1.23.0",
-    "isMajor": true,
-    "temporaryNotice": "You can now completely customize the appearance of the Scratch website."
+    "version": "1.25.0",
+    "temporaryNotice": "New preset: Oceanic Dark."
   },
   "updateUserstylesOnSettingsChange": true,
   "userscripts": [

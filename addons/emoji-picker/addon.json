@@ -23,6 +23,10 @@
   "dynamicEnable": true,
   "dynamicDisable": true,
   "versionAdded": "1.21.0",
+  "latestUpdate": {
+    "version": "1.25.0",
+    "temporaryNotice": "Added characters that resemble Among Us emojis."
+  },
   "tags": ["community", "comments", "featured"],
   "enabledByDefault": false
 }

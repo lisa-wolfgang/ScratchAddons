@@ -28,5 +28,6 @@
       ]
     }
   ],
-  "tags": ["community", "comments"]
+  "tags": ["community", "comments"],
+  "versionAdded": "1.25.0"
 }

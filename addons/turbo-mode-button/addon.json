@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ScratchAddons/manifest-schema/dist/schema.json",
   "name": "Turbo mode button",
   "description": "Adds a button that you can use to enable turbo mode.",
   "credits": [
@@ -16,5 +15,6 @@
   ],
   "dynamicDisable": true,
   "dynamicEnable": true,
-  "tags": ["editor", "projectPlayer"]
+  "tags": ["player"],
+  "versionAdded": "1.25.0"
 }

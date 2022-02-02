@@ -1139,5 +1139,9 @@
     "colors": ["primary", "menuBar", "page", "accent", "workspace", "selector"]
   },
   "tags": ["editor", "theme", "featured"],
-  "enabledByDefault": false
+  "enabledByDefault": false,
+  "latestUpdate": {
+    "version": "1.25.0",
+    "temporaryNotice": "New preset: Oceanic Dark."
+  }
 }

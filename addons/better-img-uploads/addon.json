@@ -3,6 +3,10 @@
   "description": "Adds a new button above the \"upload costume\" button that automatically converts uploaded bitmap images into SVG (vector) images to avoid losing quality.",
   "tags": ["editor", "beta", "costumeEditor"],
   "versionAdded": "1.17.0",
+  "latestUpdate": {
+    "version": "1.25.0",
+    "temporaryNotice": "You can now upload GIF files in HD."
+  },
   "info": [
     {
       "type": "notice",

@@ -54,6 +54,7 @@
   "updateUserstylesOnSettingsChange": true,
   "latestUpdate": {
     "version": "1.25.0",
+    "temporaryNotice": "New settings and new preset: Material.",
     "newSettings": ["comment-color", "forums"]
   },
   "userscripts": [

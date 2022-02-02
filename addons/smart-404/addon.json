@@ -28,5 +28,6 @@
       "url": "userstyle.css",
       "matches": ["https://scratch.mit.edu/*"]
     }
-  ]
+  ],
+  "versionAdded": "1.25.0"
 }
