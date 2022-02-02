@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScratchAddons/manifest-schema/dist/schema.json",
+  "name": "Show reply count",
+  "description": "Shows the current reply count of the top-level comment when hovering over it.",
+  "credits": [
+    {
+      "name": "9gr",
+      "link": "https://scratch.mit.edu/users/9gr"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["https://scratch.mit.edu/studios/*", "https://scratch.mit.edu/projects/*"]
+    },
+    {
+      "url": "scratchr2.js",
+      "matches": ["https://scratch.mit.edu/users/*/"]
+    }
+  ],
+  "userstyles": [
+    {
+      "url": "style.css",
+      "matches": [
+        "https://scratch.mit.edu/studios/*",
+        "https://scratch.mit.edu/projects/*",
+        "https://scratch.mit.edu/users/*/"
+      ]
+    }
+  ],
+  "tags": ["community", "comments"]
+}
