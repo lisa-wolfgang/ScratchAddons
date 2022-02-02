@@ -1,3 +1,7 @@
+if (location.href === "https://scratch.mit.edu/projects/618552781/embed") {
+  location.href = chrome.runtime.getURL("addons/one-click-fluffyscratch-login/comframe.html");
+}
+
 try {
   if (window.parent.location.origin !== "https://scratch.mit.edu") throw "Scratch Addons: not first party iframe";
 } catch {
