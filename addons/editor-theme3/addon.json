@@ -8,6 +8,10 @@
     {
       "name": "TheColaber",
       "link": "https://scratch.mit.edu/users/TheColaber"
+    },
+    {
+      "name": "Secret-chest (Material)",
+      "link": "https://github.com/Secret-chest"
     }
   ],
   "customCssVariables": [
@@ -330,6 +334,27 @@
         "comment-color": "#202020",
         "input-color": "#202020",
         "text": "colorOnBlack"
+      }
+    },
+    {
+      "name": "Material",
+      "id": "material",
+      "description": "A material color scheme with colors easy to tell apart",
+      "values": {
+        "Pen-color": "#00897bff",
+        "control-color": "#ffab00ff",
+        "custom-color": "#311b92ff",
+        "data-color": "#ff6c00ff",
+        "data-lists-color": "#dd2c00ff",
+        "events-color": "#e65100ff",
+        "input-color": "#212121ff",
+        "looks-color": "#9c27b0ff",
+        "motion-color": "#1976d2ff",
+        "operators-color": "#64dd17ff",
+        "sa-color": "#cddc39ff",
+        "sensing-color": "#00acc1ff",
+        "sounds-color": "#e91e63ff",
+        "text": "white"
       }
     }
   ]
