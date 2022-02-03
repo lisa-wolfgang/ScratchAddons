@@ -1,6 +1,13 @@
 {
   "name": "Customizable navigation bar",
-  "description": "Choose a list of links to be displayed in the navigation bar.",
+  "description": "Choose a list of links or JavaScript snippets to be displayed in the navigation bar.",
+  "info": [
+    {
+      "type": "warning",
+      "text": "Only paste JavaScript snippets from people you trust. You may be compromised if you paste malicious JavaScript here. This does not apply to regular links.",
+      "id": "javascript"
+    }
+  ],
   "userscripts": [
     {
       "url": "userscript.js",
