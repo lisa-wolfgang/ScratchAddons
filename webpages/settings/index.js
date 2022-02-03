@@ -65,10 +65,7 @@ let fuse;
   chrome.permissions.onAdded?.addListener(updateGrantedPermissions);
   chrome.permissions.onRemoved?.addListener(updateGrantedPermissions);
 
-  const promisify =
-    (callbackFn) =>
-    (...args) =>
-      new Promise((resolve) => callbackFn(...args, resolve));
+  const promisify = (callbackFn) => (...args) => new Promise((resolve) => callbackFn(...args, resolve));
 
   let handleConfirmClicked = null;
 
@@ -311,6 +308,12 @@ let fuse;
               alert(chrome.i18n.getMessage("fileNotSelected"));
               return;
             }
+            if (
+              !confirm(
+                "In Nightly, only import settings that you have exported yourself. Don't import other people's settings, as they could attempt to compromise you. Are you sure that this settings file belongs to you?"
+              )
+            )
+              return;
             const text = await file.text();
             inputElem.remove();
             const confirmElem = document.getElementById("confirmImport");

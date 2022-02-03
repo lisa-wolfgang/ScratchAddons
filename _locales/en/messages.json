@@ -288,7 +288,7 @@
     "message": "Export settings as a JSON file for use on other computers."
   },
   "useBrowserSync": {
-    "message": "You can also enable your browser's built-in sync options to automatically synchronize the settings between devices."
+    "message": "In Nightly, only import settings that you have exported yourself. Don't import other people's settings, as they could attempt to compromise you."
   },
   "export": {
     "message": "Export Settings"
