@@ -1,0 +1,17 @@
+{
+  "name": "Hide editor scrollbars",
+  "description": "Hides miscellaneous scrollbars in the editor.",
+  "tags": ["editor", "codeEditor"],
+  "enabledByDefault": false,
+  "dynamicEnable": true,
+  "dynamicDisable": true,
+  "userstyles": [
+    {
+      "url": "userstyle.css",
+      "matches": ["https://scratch.mit.edu/projects/*"]
+    }
+  ],
+
+  "credits": [{ "name": "Utter Donkey", "link": "https://pixelbulb.online/" }],
+  "versionAdded": "1.25.0"
+}
