@@ -1,0 +1,31 @@
+{
+  "name": "Highlight projects by people you follow",
+  "description": "Highlights any project on the Home or Explore pages that was made by someone you follow.",
+  "tags": ["community"],
+  "enabledByDefault": false,
+  "credits": [
+    {
+      "name": "codingMASTER398",
+      "link": "https://github.com/codingMASTER398"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": [
+        "https://scratch.mit.edu/explore/projects/*",
+        "https://scratch.mit.edu/search/projects",
+        "https://scratch.mit.edu"
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "name": "Color",
+      "id": "color",
+      "type": "color",
+      "default": "#FFD700"
+    }
+  ],
+  "versionAdded": "1.25.0"
+}
