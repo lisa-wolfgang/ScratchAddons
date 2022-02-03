@@ -65,10 +65,7 @@ let fuse;
   chrome.permissions.onAdded?.addListener(updateGrantedPermissions);
   chrome.permissions.onRemoved?.addListener(updateGrantedPermissions);
 
-  const promisify =
-    (callbackFn) =>
-    (...args) =>
-      new Promise((resolve) => callbackFn(...args, resolve));
+  const promisify = (callbackFn) => (...args) => new Promise((resolve) => callbackFn(...args, resolve));
 
   let handleConfirmClicked = null;
 
@@ -173,7 +170,7 @@ let fuse;
           return {
             contributors: `https://scratchaddons.com/${localeSlash}contributors?${utm}`,
             feedback: `https://scratchaddons.com/${localeSlash}feedback/?ext_version=${versionName}&${utm}`,
-            changelog: `https://scratchaddons.com/${localeSlash}changelog?${utm}`,
+            changelog: `https://github.com/lisa-wolfgang/ScratchAddons/releases`,
           };
         })(),
       };
