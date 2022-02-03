@@ -246,7 +246,7 @@
     "message": "Scratch Addons has updated to v$1"
   },
   "extensionUpdateInfo1_nightly": {
-    "message": "Some features may be incomplete or broken, and many have been rejected from the main extension. Features may be relocated or removed between updates."
+    "message": "Some features may be incomplete or broken, and many have been rejected from the main extension. Features may be relocated or removed between updates without warning."
   },
   "scratchAddonsSettings": {
     "message": "Scratch Addons settings"
