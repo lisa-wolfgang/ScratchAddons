@@ -23,6 +23,7 @@ const vue = new Vue({
     currentPopup: null,
     popupsWithIframes: [],
     version: chrome.runtime.getManifest().version,
+    version_name: chrome.runtime.getManifest().version_name.replace("n", "N").replace("-", " "),
   },
   methods: {
     msg(message, ...params) {
