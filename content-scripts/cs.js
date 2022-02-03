@@ -54,10 +54,7 @@ chrome.runtime.sendMessage({ contentScriptReady: { url: location.href } }, onRes
 
 const DOLLARS = ["$1", "$2", "$3", "$4", "$5", "$6", "$7", "$8", "$9"];
 
-const promisify =
-  (callbackFn) =>
-  (...args) =>
-    new Promise((resolve) => callbackFn(...args, resolve));
+const promisify = (callbackFn) => (...args) => new Promise((resolve) => callbackFn(...args, resolve));
 
 let _page_ = null;
 let globalState = null;
@@ -370,8 +367,16 @@ async function onInfoAvailable({ globalState: globalStateMsg, addonsWithUserscri
     } else if (request.fireEvent) {
       _page_.fireEvent(request.fireEvent);
     } else if (request.dynamicAddonEnabled) {
-      const { scripts, userstyles, cssVariables, addonId, injectAsStyleElt, index, dynamicEnable, dynamicDisable } =
-        request.dynamicAddonEnabled;
+      const {
+        scripts,
+        userstyles,
+        cssVariables,
+        addonId,
+        injectAsStyleElt,
+        index,
+        dynamicEnable,
+        dynamicDisable,
+      } = request.dynamicAddonEnabled;
       addStyle({ styles: userstyles, addonId, injectAsStyleElt, index });
       if (everLoadedAddons.find((addon) => addon.addonId === addonId)) {
         if (!dynamicDisable) return;
@@ -483,16 +488,16 @@ const showBanner = () => {
     box-shadow: 0 0 20px 0px #0000009e;
     line-height: 1em;`,
   });
-  const notifImageLink = Object.assign(document.createElement("a"), {
-    href: "https://www.youtube.com/watch?v=cQboWcsjR40",
-    target: "_blank",
-    rel: "noopener",
-    referrerPolicy: "strict-origin-when-cross-origin",
-  });
+  // const notifImageLink = Object.assign(document.createElement("a"), {
+  //   href: "https://www.youtube.com/watch?v=cQboWcsjR40",
+  //   target: "_blank",
+  //   rel: "noopener",
+  //   referrerPolicy: "strict-origin-when-cross-origin",
+  // });
   const notifImage = Object.assign(document.createElement("img"), {
     // alt: chrome.i18n.getMessage("hexColorPickerAlt"),
-    src: chrome.runtime.getURL("/images/cs/yt-thumbnail.jpg"),
-    style: "height: 100px; border-radius: 5px; padding: 20px",
+    src: chrome.runtime.getURL("/images/cs/Nightly Thumb.png"),
+    style: "height: 175px; border-radius: 5px; padding: 20px",
   });
   const notifText = Object.assign(document.createElement("div"), {
     id: "sa-notification-text",
@@ -514,15 +519,9 @@ const showBanner = () => {
 
   const NOTIF_TEXT_STYLE = "display: block; font-size: 14px; color: white !important;";
 
-  const notifInnerText0 = Object.assign(document.createElement("span"), {
-    style: NOTIF_TEXT_STYLE + "font-weight: bold;",
-    textContent: chrome.i18n
-      .getMessage("extensionHasUpdated", DOLLARS)
-      .replace(/\$(\d+)/g, (_, i) => [chrome.runtime.getManifest().version][Number(i) - 1]),
-  });
   const notifInnerText1 = Object.assign(document.createElement("span"), {
     style: NOTIF_TEXT_STYLE,
-    innerHTML: escapeHTML(chrome.i18n.getMessage("extensionUpdateInfo1_v1_24", DOLLARS)).replace(
+    innerHTML: escapeHTML(chrome.i18n.getMessage("extensionUpdateInfo1_nightly", DOLLARS)).replace(
       /\$(\d+)/g,
       (_, i) =>
         [
@@ -541,7 +540,7 @@ const showBanner = () => {
   });
   const notifInnerText2 = Object.assign(document.createElement("span"), {
     style: NOTIF_TEXT_STYLE,
-    textContent: chrome.i18n.getMessage("extensionUpdateInfo2_v1_24"),
+    textContent: chrome.i18n.getMessage("extensionUpdateInfo2_nightly"),
   });
   const notifFooter = Object.assign(document.createElement("span"), {
     style: NOTIF_TEXT_STYLE,
@@ -556,33 +555,15 @@ const showBanner = () => {
     target: "_blank",
     textContent: chrome.i18n.getMessage("notifChangelog"),
   });
-  const notifFooterFeedback = Object.assign(document.createElement("a"), {
-    href: `https://scratchaddons.com/${localeSlash}feedback/?ext_version=${
-      chrome.runtime.getManifest().version
-    }&${utm}`,
-    target: "_blank",
-    textContent: chrome.i18n.getMessage("feedback"),
-  });
-  const notifFooterTranslate = Object.assign(document.createElement("a"), {
-    href: "https://scratchaddons.com/translate",
-    target: "_blank",
-    textContent: chrome.i18n.getMessage("translate"),
-  });
   const notifFooterLegal = Object.assign(document.createElement("small"), {
     textContent: chrome.i18n.getMessage("notAffiliated"),
   });
   notifFooter.appendChild(notifFooterChangelog);
-  notifFooter.appendChild(document.createTextNode(" | "));
-  notifFooter.appendChild(notifFooterFeedback);
-  notifFooter.appendChild(document.createTextNode(" | "));
-  notifFooter.appendChild(notifFooterTranslate);
   notifFooter.appendChild(makeBr());
   notifFooter.appendChild(notifFooterLegal);
 
   notifText.appendChild(notifTitle);
   notifText.appendChild(notifClose);
-  notifText.appendChild(makeBr());
-  notifText.appendChild(notifInnerText0);
   notifText.appendChild(makeBr());
   notifText.appendChild(notifInnerText1);
   notifText.appendChild(makeBr());
@@ -590,9 +571,9 @@ const showBanner = () => {
   notifText.appendChild(makeBr());
   notifText.appendChild(notifFooter);
 
-  notifImageLink.appendChild(notifImage);
+  notifInnerBody.appendChild(notifImage);
 
-  notifInnerBody.appendChild(notifImageLink);
+  // notifInnerBody.appendChild(notifImageLink);
   notifInnerBody.appendChild(notifText);
 
   notifOuterBody.appendChild(notifInnerBody);
@@ -609,10 +590,10 @@ const handleBanner = async () => {
   const settings = await promisify(chrome.storage.local.get.bind(chrome.storage.local))(["bannerSettings"]);
   const force = !settings || !settings.bannerSettings;
 
-  if (force || settings.bannerSettings.lastShown !== currentVersionMajorMinor || location.hash === "#sa-update-notif") {
+  if (force || settings.bannerSettings.lastShown !== "nightly" || location.hash === "#sa-update-notif") {
     console.log("Banner shown.");
     await promisify(chrome.storage.local.set.bind(chrome.storage.local))({
-      bannerSettings: Object.assign({}, settings.bannerSettings, { lastShown: currentVersionMajorMinor }),
+      bannerSettings: Object.assign({}, settings.bannerSettings, { lastShown: "nightly" }),
     });
     showBanner();
   }
