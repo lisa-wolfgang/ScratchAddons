@@ -54,10 +54,7 @@ chrome.runtime.sendMessage({ contentScriptReady: { url: location.href } }, onRes
 
 const DOLLARS = ["$1", "$2", "$3", "$4", "$5", "$6", "$7", "$8", "$9"];
 
-const promisify =
-  (callbackFn) =>
-  (...args) =>
-    new Promise((resolve) => callbackFn(...args, resolve));
+const promisify = (callbackFn) => (...args) => new Promise((resolve) => callbackFn(...args, resolve));
 
 let _page_ = null;
 let globalState = null;
@@ -370,8 +367,16 @@ async function onInfoAvailable({ globalState: globalStateMsg, addonsWithUserscri
     } else if (request.fireEvent) {
       _page_.fireEvent(request.fireEvent);
     } else if (request.dynamicAddonEnabled) {
-      const { scripts, userstyles, cssVariables, addonId, injectAsStyleElt, index, dynamicEnable, dynamicDisable } =
-        request.dynamicAddonEnabled;
+      const {
+        scripts,
+        userstyles,
+        cssVariables,
+        addonId,
+        injectAsStyleElt,
+        index,
+        dynamicEnable,
+        dynamicDisable,
+      } = request.dynamicAddonEnabled;
       addStyle({ styles: userstyles, addonId, injectAsStyleElt, index });
       if (everLoadedAddons.find((addon) => addon.addonId === addonId)) {
         if (!dynamicDisable) return;
