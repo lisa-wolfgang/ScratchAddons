@@ -1,0 +1,34 @@
+{
+  "name": "Profile sub-pages navigation",
+  "description": "Navigate through user profiles with navigation links on sub-pages, such as the followers list, studios list, and projects list.",
+  "tags": ["community", "profiles"],
+  "enabledByDefault": false,
+  "versionAdded": "1.25.0",
+  "dynamicDisable": true,
+  "dynamicEnable": true,
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": [
+        "https://scratch.mit.edu/users/*/projects/",
+        "https://scratch.mit.edu/users/*/favorites/",
+        "https://scratch.mit.edu/users/*/studios/",
+        "https://scratch.mit.edu/users/*/studios_following/",
+        "https://scratch.mit.edu/users/*/following/",
+        "https://scratch.mit.edu/users/*/followers/"
+      ]
+    }
+  ],
+  "credits": [
+    {
+      "name": "Xan",
+      "link": "https://scratch.mit.edu/users/-Xanimation-/",
+      "note": "Addon version"
+    },
+    {
+      "name": "Zro617",
+      "link": "https://scratch.mit.edu/users/Zro716/",
+      "note": "Original userscript"
+    }
+  ]
+}
