@@ -1,0 +1,93 @@
+{
+  "name": "Customizable banner colors",
+  "description": "Lets you change the colors of the discuss, explore, and My Stuff banners.",
+  "tags": ["community", "forums"],
+  "enabledByDefault": false,
+  "versionAdded": "1.25.0",
+  "injectAsStyleElt": true,
+  "dynamicEnable": true,
+  "dynamicDisable": true,
+  "updateUserstylesOnSettingsChange": true,
+  "info": [
+    {
+      "type": "notice",
+      "text": "The Scratch 2.0 \u2192 3.0 addon must be enabled to change the discuss and My Stuff colors.",
+      "id": "scratchr2AddonNotice"
+    }
+  ],
+  "settings": [
+    {
+      "name": "Discuss banner color",
+      "id": "forumcolor",
+      "type": "color",
+      "default": "#0fbd8c",
+      "if": {
+        "addonEnabled": ["scratchr2"]
+      }
+    },
+    {
+      "name": "Explore banner color",
+      "id": "explorecolor",
+      "type": "color",
+      "default": "#ffbf00"
+    },
+    {
+      "name": "My Stuff banner color",
+      "id": "mystuffcolor",
+      "type": "color",
+      "default": "#4d97ff",
+      "if": {
+        "addonEnabled": ["scratchr2"]
+      }
+    }
+  ],
+  "userstyles": [
+    {
+      "url": "forums.css",
+      "matches": ["forums"],
+      "if": {
+        "addonEnabled": ["scratchr2"]
+      }
+    },
+    {
+      "url": "explore.css",
+      "matches": ["https://scratch.mit.edu/explore/*"]
+    },
+    {
+      "url": "mystuff.css",
+      "matches": ["https://scratch.mit.edu/mystuff/*"],
+      "if": {
+        "addonEnabled": ["scratchr2"]
+      }
+    }
+  ],
+  "customCssVariables": [
+    {
+      "name": "forumcolor",
+      "value": {
+        "type": "settingValue",
+        "settingId": "forumcolor"
+      }
+    },
+    {
+      "name": "explorecolor",
+      "value": {
+        "type": "settingValue",
+        "settingId": "explorecolor"
+      }
+    },
+    {
+      "name": "mystuffcolor",
+      "value": {
+        "type": "settingValue",
+        "settingId": "mystuffcolor"
+      }
+    }
+  ],
+  "credits": [
+    {
+      "name": "MystPi",
+      "link": "https://github.com/mystpi"
+    }
+  ]
+}
