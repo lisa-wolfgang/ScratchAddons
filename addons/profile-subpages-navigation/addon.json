@@ -23,12 +23,14 @@
     {
       "name": "Xan",
       "link": "https://scratch.mit.edu/users/-Xanimation-/",
-      "note": "Addon version"
+      "note": "Addon version",
+      "id": "port"
     },
     {
       "name": "Zro617",
       "link": "https://scratch.mit.edu/users/Zro716/",
-      "note": "Original userscript"
+      "note": "Original userscript",
+      "id": "original"
     }
   ]
 }
