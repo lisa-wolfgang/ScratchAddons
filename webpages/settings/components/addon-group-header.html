@@ -3,9 +3,7 @@
     <img src="../../images/icons/expand.svg" alt="v" :class="{ 'reverted': group.expanded }" />
     {{ group.name }} ({{ shownCount }})
   </div>
-  <div class="addon-group-desc" v-show="shouldShow && group.expanded && group.description">
-    {{ group.description }}
-  </div>
+  <div class="addon-group-desc" v-show="shouldShow && group.expanded && group.description">{{ group.description }}</div>
 </template>
 
 <style>
