@@ -1,7 +1,8 @@
 {
   "name": "Horizontal tabs in My Stuff",
   "description": "Moves the tab bar in My Stuff to the top of the page.",
-  "tags": ["community"],
+  "tags": ["community", "inDev"],
+  "versionAdded": "1.25.0",
   "credits": [
     {
       "name": "Maximouse",
