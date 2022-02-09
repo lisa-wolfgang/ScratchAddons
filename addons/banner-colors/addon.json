@@ -1,7 +1,7 @@
 {
   "name": "Customizable banner colors",
   "description": "Lets you change the colors of the discuss, explore, and My Stuff banners.",
-  "tags": ["community", "forums"],
+  "tags": ["community", "forums", "inDev"],
   "enabledByDefault": false,
   "versionAdded": "1.25.0",
   "injectAsStyleElt": true,

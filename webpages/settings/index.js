@@ -545,7 +545,10 @@ let fuse;
       if (manifest._enabled) manifest._groups.push("enabled");
       else {
         // Addon is disabled
-        if (manifest.tags.includes("recommended")) manifest._groups.push("recommended");
+        if (manifest.tags.includes("upcoming")) manifest._groups.push("upcoming");
+        else if (manifest.tags.includes("inDev")) manifest._groups.push("inDev");
+        else if (manifest.tags.includes("rejected")) manifest._groups.push("rejected");
+        else if (manifest.tags.includes("recommended")) manifest._groups.push("recommended");
         else if (manifest.tags.includes("featured")) manifest._groups.push("featured");
         else if (manifest.tags.includes("beta") || manifest.tags.includes("danger")) manifest._groups.push("beta");
         else if (manifest.tags.includes("forums")) manifest._groups.push("forums");

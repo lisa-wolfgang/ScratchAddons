@@ -23,7 +23,7 @@
       "matches": ["https://scratch.mit.edu/projects/413751680", "https://scratch.mit.edu/projects/413751680/*"]
     }
   ],
-  "tags": ["community"],
+  "tags": ["community", "rejected"],
   "enabledByDefault": true,
   "versionAdded": "1.25.0"
 }

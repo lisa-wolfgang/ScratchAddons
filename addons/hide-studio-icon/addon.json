@@ -17,7 +17,7 @@
       "matches": ["https://scratch.mit.edu/users/*", "https://scratch.mit.edu/projects/*/studios/"]
     }
   ],
-  "tags": ["community", "profiles"],
+  "tags": ["community", "profiles", "rejected"],
   "enabledByDefault": false,
   "dynamicEnable": true,
   "dynamicDisable": true,

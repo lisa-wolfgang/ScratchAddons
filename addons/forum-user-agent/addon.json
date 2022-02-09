@@ -1,7 +1,7 @@
 {
   "name": "Forum user agent",
   "description": "Gets user agent of forum post creators.",
-  "tags": ["community", "forums"],
+  "tags": ["community", "forums", "rejected"],
   "credits": [
     {
       "name": "god286",

@@ -40,7 +40,7 @@
     "isMajor": false,
     "temporaryNotice": "You can now paste images using the Paste Image button or by pressing Ctrl+V on the sprite pane, list of costumes or the stage pane."
   },
-  "tags": ["editor", "costumeEditor"],
+  "tags": ["editor", "costumeEditor", "inDev"],
   "permissions": ["clipboardWrite"],
   "enabledByDefault": false
 }

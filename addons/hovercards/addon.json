@@ -106,7 +106,7 @@
       "default": false
     }
   ],
-  "tags": ["community", "featured"],
+  "tags": ["community", "featured", "inDev"],
   "enabledByDefault": false,
   "versionAdded": "1.25.0",
   "libraries": ["popper", "tippy"],

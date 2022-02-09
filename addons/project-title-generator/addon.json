@@ -38,7 +38,7 @@
       "default": false
     }
   ],
-  "tags": ["editor"],
+  "tags": ["editor", "inDev"],
   "dynamicEnable": true,
   "dynamicDisable": true,
   "versionAdded": "1.25.0"

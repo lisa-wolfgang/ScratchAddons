@@ -1,7 +1,7 @@
 {
   "name": "Hide editor scrollbars",
   "description": "Hides miscellaneous scrollbars in the editor.",
-  "tags": ["editor", "codeEditor"],
+  "tags": ["editor", "codeEditor", "rejected"],
   "enabledByDefault": false,
   "dynamicEnable": true,
   "dynamicDisable": true,

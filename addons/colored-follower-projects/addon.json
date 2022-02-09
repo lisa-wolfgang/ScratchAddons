@@ -1,7 +1,7 @@
 {
   "name": "Highlight projects by people you follow",
   "description": "Highlights any project on the Home or Explore pages that was made by someone you follow.",
-  "tags": ["community"],
+  "tags": ["community", "rejected"],
   "enabledByDefault": false,
   "credits": [
     {

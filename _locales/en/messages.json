@@ -269,13 +269,41 @@
     "message": "New settings",
     "description": "Tag for addons with new settings. Singular."
   },
-  "newGroup": {
-    "message": "Other new addons and updates",
+  "upcoming": {
+    "message": "Upcoming",
+    "description": "Tag for Nightly addons that are merged into prerelease. Singular."
+  },
+  "inDev": {
+    "message": "In development",
+    "description": "Tag for Nightly addons that have neither been merged nor rejected. Singular."
+  },
+  "rejected": {
+    "message": "Rejected",
+    "description": "Tag for Nightly addons that will not be implemented in the regular extension. Singular."
+  },
+  "upcomingGroup": {
+    "message": "Upcoming",
     "description": "Used as a category name for new addons and updates"
   },
-  "featuredNew": {
-    "message": "Featured new addons and updates",
+  "inDevGroup": {
+    "message": "In development",
     "description": "Used as a category name for featured new addons and updates"
+  },
+  "rejectedGroup": {
+    "message": "Rejected",
+    "description": "Used as a category name for featured new addons and updates"
+  },
+  "upcomingGroupDesc": {
+    "message": "These new addons and features are in the prerelease version of the extension.",
+    "description": "A description of the 'upcoming' category"
+  },
+  "inDevGroupDesc": {
+    "message": "These new addons and features might be buggy or unfinished. They may be changed or removed at any time.",
+    "description": "A description of the 'in development' category"
+  },
+  "rejectedGroupDesc": {
+    "message": "These new addons and features were rejected for various reasons, mostly because they were deemed not useful or because of Chrome Web Store considerations. Nevertheless, use them at your own risk.",
+    "description": "A description of the 'rejected' category"
   },
   "enabled": {
     "message": "Enabled",

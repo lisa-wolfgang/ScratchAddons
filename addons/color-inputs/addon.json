@@ -8,7 +8,7 @@
     }
   ],
   "versionAdded": "1.25.0",
-  "tags": ["editor", "costumeEditor", "recommended"],
+  "tags": ["editor", "costumeEditor", "recommended", "inDev"],
   "userscripts": [
     {
       "url": "userscript.js",

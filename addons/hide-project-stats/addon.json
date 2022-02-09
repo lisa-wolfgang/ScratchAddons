@@ -110,7 +110,7 @@
   "dynamicEnable": true,
   "updateUserstylesOnSettingsChange": true,
   "injectAsStyleElt": true,
-  "tags": ["community", "projectPage"],
+  "tags": ["community", "projectPage", "inDev"],
   "versionAdded": "1.19.0",
   "latestUpdate": {
     "version": "1.25.0",

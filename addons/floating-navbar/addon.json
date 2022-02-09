@@ -45,6 +45,6 @@
     }
   ],
   "versionAdded": "1.25.0",
-  "tags": ["community", "profiles", "forums", "studios"],
+  "tags": ["community", "profiles", "forums", "studios", "inDev"],
   "enabledByDefault": false
 }

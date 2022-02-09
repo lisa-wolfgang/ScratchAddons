@@ -13,7 +13,7 @@
       "matches": ["projects"]
     }
   ],
-  "tags": ["player"],
+  "tags": ["player", "rejected"],
   "versionAdded": "1.25.0",
   "enabledByDefault": false
 }

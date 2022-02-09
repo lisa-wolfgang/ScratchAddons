@@ -147,7 +147,7 @@
   "dynamicDisable": true,
   "updateUserstylesOnSettingsChange": true,
   "injectAsStyleElt": true,
-  "tags": ["player", "theme", "beta", "featured"],
+  "tags": ["player", "theme", "featured", "inDev"],
   "versionAdded": "1.25.0",
   "enabledByDefault": false
 }

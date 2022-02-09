@@ -1,7 +1,7 @@
 {
   "name": "Profile sub-pages navigation",
   "description": "Navigate through user profiles with navigation links on sub-pages, such as the followers list, studios list, and projects list.",
-  "tags": ["community", "profiles"],
+  "tags": ["community", "profiles", "inDev"],
   "enabledByDefault": false,
   "versionAdded": "1.25.0",
   "dynamicDisable": true,

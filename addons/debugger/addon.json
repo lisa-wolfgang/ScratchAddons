@@ -81,7 +81,7 @@
       "default": false
     }
   ],
-  "tags": ["editor", "featured"],
+  "tags": ["editor", "featured", "inDev"],
   "enabledByDefault": false,
   "versionAdded": "1.16.0",
   "latestUpdate": {

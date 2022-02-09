@@ -15,6 +15,6 @@
   ],
   "dynamicDisable": true,
   "dynamicEnable": true,
-  "tags": ["player"],
+  "tags": ["player", "inDev"],
   "versionAdded": "1.25.0"
 }

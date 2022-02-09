@@ -1138,7 +1138,7 @@
     "type": "palette",
     "colors": ["primary", "menuBar", "page", "accent", "workspace", "selector"]
   },
-  "tags": ["editor", "theme", "featured"],
+  "tags": ["editor", "theme", "featured", "rejected"],
   "enabledByDefault": false,
   "latestUpdate": {
     "version": "1.25.0",

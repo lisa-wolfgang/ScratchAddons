@@ -246,7 +246,7 @@
       "default": false
     }
   ],
-  "tags": ["editor", "theme", "codeEditor", "featured"],
+  "tags": ["editor", "theme", "codeEditor", "featured", "rejected"],
   "enabledByDefault": false,
   "presets": [
     {

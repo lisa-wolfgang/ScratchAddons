@@ -47,6 +47,10 @@
   background: rgb(177, 23, 248);
   border-color: #b20eb8;
 }
+.badge.black {
+  background: rgb(48, 48, 48);
+  border-color: rgb(0, 0, 0);
+}
 .filter-option.sel.blue {
   background: #175ef8;
 }

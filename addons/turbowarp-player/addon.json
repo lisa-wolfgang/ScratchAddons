@@ -71,5 +71,5 @@
     "isMajor": true,
     "newSettings": ["auto"]
   },
-  "tags": ["community", "projectPage", "featured"]
+  "tags": ["community", "projectPage", "featured", "inDev"]
 }

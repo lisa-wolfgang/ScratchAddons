@@ -20,7 +20,7 @@
       "matches": ["projects"]
     }
   ],
-  "tags": ["editor"],
+  "tags": ["editor", "rejected"],
   "enabledByDefault": false,
   "versionAdded": "1.25.0"
 }

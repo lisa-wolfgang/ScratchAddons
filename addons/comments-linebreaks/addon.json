@@ -60,5 +60,5 @@
     "version": "1.25.0",
     "newSettings": ["scrollbars", "height"]
   },
-  "tags": ["community", "comments"]
+  "tags": ["community", "comments", "inDev"]
 }

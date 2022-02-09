@@ -36,6 +36,24 @@ export default [
     iframeAlwaysShow: true,
   },
   {
+    name: "upcoming",
+    matchName: "upcoming",
+    color: "purple",
+    iframeAlwaysShow: true,
+  },
+  {
+    name: "inDev",
+    matchName: "inDev",
+    color: "red",
+    iframeAlwaysShow: true,
+  },
+  {
+    name: "rejected",
+    matchName: "rejected",
+    color: "darkred",
+    iframeAlwaysShow: true,
+  },
+  {
     name: "forums",
     tooltipText: "forumsTooltip",
     matchName: "forums",
