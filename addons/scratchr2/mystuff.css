@@ -34,10 +34,10 @@ body:not(.beta-opt-in, .password-change, .email-change) #content > .cols > .col-
   animation-delay: 0s, 0.25s;
   animation-iteration-count: 1, infinite;
 }
-.box .box-head {
+#content > .cols > .col-12 > .box > .box-head {
   padding-bottom: 20px;
 }
-.box .box-head .buttons {
+#content > .cols > .col-12 > .box > .box-head .buttons {
   position: static;
   width: 942px;
   margin: auto;
