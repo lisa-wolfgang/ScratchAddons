@@ -3,6 +3,12 @@ contact_links:
   - name: 💬 Discuss Nightly
     url: https://github.com/lisa-wolfgang/ScratchAddons/discussions
     about: Get help or ask a question about Nightly
-  - name: 🔼 Go back to regular Scratch Addons
+  - name: ➕ New addon
+    url: https://github.com/ScratchAddons/ScratchAddons/issues/new?assignees=&labels=type%3A+enhancement%2C+new+addon%2C+scope%3A+addon&template=--new-addon.md&title=
+    about: Request a new addon for the release version of Scratch Addons
+  - name: ✨ Other feature
+    url: https://github.com/ScratchAddons/ScratchAddons/issues/new?assignees=&labels=type%3A+enhancement%2C+status%3A+needs+triage&template=--feature.md&title=
+    about: Request a feature for the release version of Scratch Addons
+  - name: 🔼 Back to main Scratch Addons repository
     url: https://github.com/ScratchAddons/ScratchAddons/issues/new/choose
-    about: Create an issue or browse resources for the main Scratch Addons repository
+    about: Browse resources for the release version of Scratch Addons
