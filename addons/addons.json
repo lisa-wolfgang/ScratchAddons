@@ -116,6 +116,7 @@
   "search-sprites",
   "hide-signatures",
   "disable-sprite-wobble",
+  "forum-live-preview",
 
   "// NEW ADDONS ABOVE THIS ↑↑",
   "// Note: these themes need this exact order to work properly,",
@@ -131,6 +132,7 @@
   "better-featured-project",
   "material-forum-editor-buttons",
   "forum-quote-code-beautifier",
+  "horizontal-mystuff-tabs",
   "// For editor:",
   "editor-dark-mode",
   "editor-colored-context-menus",
