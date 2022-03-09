@@ -22,7 +22,7 @@ body:
       required: true
   - type: markdown
     attributes:
-      value: "**If the popup doesn't say \"Nightly\" before the version number, [https://github.com/ScratchAddons/ScratchAddons/issues/new?assignees=&labels=type%3A+bug%2C+status%3A+needs+triage&template=---bug.md&title=](please submit your bug report here instead).**"
+      value: "**If the popup doesn't say \"Nightly\" before the version number, [please submit your bug report here instead](https://github.com/ScratchAddons/ScratchAddons/issues/new?assignees=&labels=type%3A+bug%2C+status%3A+needs+triage&template=---bug.md&title=).**"
   - type: input
     id: "browser"
     attributes:
