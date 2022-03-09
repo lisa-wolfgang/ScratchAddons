@@ -4,8 +4,7 @@ labels: [bug]
 body:
   - type: markdown
     attributes:
-      value: "# Does this bug also happen in regular Scratch Addons? If so, report the bug [here](https://github.com/ScratchAddons/ScratchAddons/issues/new?assignees=&labels=type%3A+bug%2C+status%3A+needs+triage&template=---bug.md&title=) instead."
-
+      value: "### Does this bug also happen in regular Scratch Addons? If so, [report the bug here instead](https://github.com/ScratchAddons/ScratchAddons/issues/new?assignees=&labels=type%3A+bug%2C+status%3A+needs+triage&template=---bug.md&title=)."
   - type: checkboxes
     id: "verify"
     attributes:
@@ -17,12 +16,13 @@ body:
     id: "version"
     attributes:
       label: "Nightly version"
-      description:
-        "Open the extension popup and enter the version number that appears.
-        **If the popup doesn't say \"Nightly\" before the version number, [https://github.com/ScratchAddons/ScratchAddons/issues/new?assignees=&labels=type%3A+bug%2C+status%3A+needs+triage&template=---bug.md&title=](please submit your bug report here instead)."
+      description: "Open the extension popup and enter the version number that appears."
       placeholder: "Example: Nightly 02-08-22"
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: "**If the popup doesn't say \"Nightly\" before the version number, [https://github.com/ScratchAddons/ScratchAddons/issues/new?assignees=&labels=type%3A+bug%2C+status%3A+needs+triage&template=---bug.md&title=](please submit your bug report here instead).**"
   - type: input
     id: "browser"
     attributes:
@@ -43,14 +43,16 @@ body:
     id: "description"
     attributes:
       label: "Description"
-      description: "What's not working the way you expect it to? What is it doing instead?"
+      description: "What happened, and what did you expect instead?"
     validations:
       required: true
   - type: textarea
     id: "repro"
     attributes:
       label: "Example scenario"
-      description: "What are the steps someone else can take to reproduce the bug? Please be as specific as possible. You can also link to a live example."
+      description: |
+        What are the steps someone else can take to reproduce the bug?
+        Please be as specific as possible. Alternatively, you can link to a live example.
     validations:
       required: true
   - type: textarea
@@ -64,7 +66,9 @@ body:
     id: "console"
     attributes:
       label: "Console errors"
-      description: "Go to the page where you're experiencing the issue and press `Ctrl+Shift+K`. If there are any red errors, please copy or screenshot them, then submit them here."
+      description: |
+        Go to the page where you're experiencing the issue and press `Ctrl+Shift+K`.
+        If there are any red errors, please copy or screenshot them, then submit them here.
     validations:
       required: false
   - type: markdown
