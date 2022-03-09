@@ -11,7 +11,7 @@ body:
     attributes:
       label: "Are you sure that this doesn't also happen in regular Scratch Addons?"
       options:
-        - label: yes
+        - label: "Yes"
           required: true
   - type: input
     id: "version"
