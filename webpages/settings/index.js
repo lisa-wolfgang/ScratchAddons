@@ -171,7 +171,7 @@ let fuse;
           const versionName = chrome.runtime.getManifest().version_name;
           const utm = `utm_source=extension&utm_medium=settingspage&utm_campaign=v${version}`;
           return {
-            contributors: `https://scratchaddons.com/${localeSlash}contributors?${utm}`,
+            contributors: `https://scratchaddons.com/${localeSlash}credits?${utm}`,
             feedback: `https://scratchaddons.com/${localeSlash}feedback/?ext_version=${versionName}&${utm}`,
             changelog: `https://github.com/lisa-wolfgang/ScratchAddons/releases`,
           };
@@ -215,6 +215,9 @@ let fuse;
         );
         for (const obj of addonListObjs) obj.matchesSearch = results.includes(obj);
         return addonListObjs.sort((b, a) => results.indexOf(b) - results.indexOf(a));
+      },
+      hasNoResults() {
+        return !this.addonList.some((addon) => addon.matchesSearch && addon.matchesCategory);
       },
       version() {
         return chrome.runtime.getManifest().version;

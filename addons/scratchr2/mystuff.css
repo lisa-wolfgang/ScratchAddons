@@ -7,9 +7,6 @@
 #content > .cols > .col-12 {
   width: 662px;
 }
-body:not(.beta-opt-in, .password-change, .email-change) #content > .cols > .col-12 > .box {
-  background-color: var(--darkWww-page, #fcfcfc);
-}
 .ajax-loader {
   background-color: transparent;
   background-image: none;

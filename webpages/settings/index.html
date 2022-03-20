@@ -134,7 +134,7 @@
           v-cloak
           class="category category-small"
           style="margin-top: auto"
-          href="https://scratchaddons.com/contributors/"
+          href="https://scratchaddons.com/credits/"
           :href="sidebarUrls.contributors"
           target="_blank"
         >
@@ -184,10 +184,11 @@
             features may be incomplete or broken, and many have been rejected from the main extension. Features may be
             relocated or removed between updates without warning. Proceed at your own risk.
           </div>
+          <p id="search-not-found" v-show="searchInput && hasNoResults">{{ msg("searchNotFound") }}</p>
           <template v-for="addon of addonList">
             <div
               id="iframe-fullscreen-suggestion"
-              v-if="isIframe && addon.headerAbove && addon.group.id === 'enabled'"
+              v-if="isIframe && addon.headerAbove && (hasNoResults || addon.group.id === 'enabled')"
               v-show="searchInput === ''"
             >
               <span>{{ msg("exploreAllAddons", [addonAmt]) }}</span>

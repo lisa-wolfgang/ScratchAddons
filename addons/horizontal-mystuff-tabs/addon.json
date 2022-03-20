@@ -1,14 +1,14 @@
 {
-  "name": "Horizontal tabs in My Stuff",
-  "description": "Moves the tab bar in My Stuff to the top of the page.",
-  "tags": ["community", "inDev"],
-  "versionAdded": "1.25.0",
+  "name": "Horizontal tabs on My Stuff",
+  "description": "Moves the My Stuff navigation buttons (\"All Projects\", \"My Studios\", \"Trash\") to the top of the page, instead of keeping them on the left.",
+  "tags": ["community", "theme"],
   "credits": [
     {
       "name": "Maximouse",
       "link": "https://scratch.mit.edu/users/Maximouse/"
     }
   ],
+  "versionAdded": "1.25.0",
   "dynamicEnable": true,
   "dynamicDisable": true,
   "injectAsStyleElt": true,
