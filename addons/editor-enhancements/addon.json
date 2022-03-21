@@ -95,7 +95,7 @@
   ],
   "dynamicEnable": true,
   "dynamicDisable": true,
-  "tags": ["editor", "codeEditor", "inDev"],
+  "tags": ["editor", "codeEditor", "rejected"],
   "enabledByDefault": false,
   "versionAdded": "1.26.0"
 }
