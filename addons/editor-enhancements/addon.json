@@ -1,0 +1,101 @@
+{
+  "name": "Small editor enhancements",
+  "description": "This addon have a lot of small features that aren't too big for normal addon!",
+  "info": [
+    {
+      "type": "notice",
+      "text": "Press \"Shift\" while clicking on sprite in sprite list to move it to top. To lock and unlock your mouse position you need to click \"Esc\" key.",
+      "id": "shortcuts"
+    }
+  ],
+  "credits": [
+    {
+      "name": "Norbiros",
+      "link": "https://scratch.mit.edu/users/Norbir/"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["projects"]
+    }
+  ],
+  "updateUserstylesOnSettingsChange": true,
+  "userstyles": [
+    {
+      "url": "/styles/userstyle.css",
+      "matches": ["projects"]
+    },
+    {
+      "url": "/styles/hidebackpack.css",
+      "matches": ["projects"],
+      "if": {
+        "settings": { "hideBackpack": true }
+      }
+    },
+    {
+      "url": "/styles/disablespritewooble.css",
+      "matches": ["projects"],
+      "if": {
+        "settings": { "disableSpriteWooble": true }
+      }
+    },
+    {
+      "url": "/styles/removenavbar.css",
+      "matches": ["projects"],
+      "if": {
+        "settings": { "removeNavbar": true }
+      }
+    }
+  ],
+
+  "settings": [
+    {
+      "name": "Hide Backapck",
+      "id": "hideBackpack",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "Move sprite to front layer",
+      "id": "moveSpriteToFront",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "name": "Lock mouse position",
+      "id": "lockMouse",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "name": "Take photo of scene",
+      "id": "takePhoto",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "name": "Remove navbar of scene",
+      "id": "removeNavbar",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "Create button that allows to hide scene",
+      "id": "hideStage",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "Show pretty input for changing size",
+      "id": "sizeInput",
+      "type": "boolean",
+      "default": true
+    }
+  ],
+  "dynamicEnable": true,
+  "dynamicDisable": true,
+  "tags": ["editor", "codeEditor", "inDev"],
+  "enabledByDefault": false,
+  "versionAdded": "1.26.0"
+}
