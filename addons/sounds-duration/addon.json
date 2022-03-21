@@ -1,0 +1,17 @@
+{
+  "name": "Sound duration display",
+  "description": "Displays the duration of sounds in the sound editor as well as how long it has been playing.",
+  "credits": [
+    {
+      "name": "TheColaber",
+      "link": "https://scratch.mit.edu/users/TheColaber"
+    }
+  ],
+  "tags": ["editor", "inDev", "featured"],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["projects"]
+    }
+  ]
+}
