@@ -2,10 +2,10 @@ name: Format code using Prettier
 on:
   push:
     branches-ignore:
-      - sa-nightly
+      - 'sa-nightly'
   pull_request:
     branches-ignore:
-      - sa-nightly
+      - 'sa-nightly'
 
 jobs:
   format:
