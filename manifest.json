@@ -3,7 +3,7 @@
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
   "version": "1.26.0",
-  "version_name": "nightly-03-20-22",
+  "version_name": "nightly-03-21-22",
   "default_locale": "en",
   "background": {
     "page": "background/background.html"
